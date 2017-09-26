@@ -3,8 +3,10 @@ class SectionsController < ApplicationController
 
   # GET /sections
   # GET /sections.json
+
   def index
     @sections = Section.all
+    @sections = Section.where("number like ?","%#{params[:q]}%")
   end
 
   # GET /sections/1
