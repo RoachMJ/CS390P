@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
+    @courses = Course.where("name like ?","%#{params[:q]}%")#
   end
 
   # GET /courses/1
