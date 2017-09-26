@@ -7,7 +7,7 @@
     <%= submit_tag 'Search', name: nil %>
 <% end %>
 
-<% if @professors.blank? %>
+<% if @courses.blank? %>
     <h4>No results found for "<%= params[:q] %>".Ensure that you are searching for a course!</h4>
 <% end %>
 <table>
